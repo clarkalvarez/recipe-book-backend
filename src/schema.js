@@ -7,6 +7,7 @@ export const typeDefs = gql`
     description: String
     image: String
     ingredients: [String]
+    reviewsForRecipe(author: String): [Review]
   }
 
   type Review {
@@ -19,7 +20,7 @@ export const typeDefs = gql`
 
   type Query {
     recipes: [Recipe]
-    recipe(id: ID!): Recipe
+    recipe(name: String): Recipe
     reviews: [Review]
     review(id: ID!): Review
   }
