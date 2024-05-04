@@ -4,11 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "concurrently npm:start:graphs npm:start:gateway",
-    "start:gateway": "nodemon gateway.js",
-    "start:graphs": "concurrently npm:start:graph:*",
-    "start:graph:recipe": "nodemon recipes-graph/src/server.js",
-    "start:graph:reviews": "nodemon reviews-graph/src/server.js",
+    "start": "nodemon src/server.js",
     "migrate": "node src/migration/migration.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,12 +14,10 @@
   "type": "module",
   "dependencies": {
     "@apollo/federation": "^0.38.1",
-    "@apollo/gateway": "^2.7.4",
     "apollo-server": "^3.13.0",
-    "concurrently": "^8.2.0",
     "knex": "^3.1.0",
+    "node": "^22.0.0",
     "nodemon": "^3.1.0",
-    "pg": "^8.11.5",
-    "wait-port": "^1.1.0"
+    "pg": "^8.11.5"
   }
 }

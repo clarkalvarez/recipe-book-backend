@@ -1,4 +1,4 @@
-import { pool } from "../../../db.js";
+import { pool } from "../../db.js";
 
 export const deleteRecipe = async (_, { id }) => {
   console.log(id);

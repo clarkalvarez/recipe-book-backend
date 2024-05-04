@@ -1,4 +1,4 @@
-import { pool } from "../../../db.js";
+import { pool } from "../../db.js";
 
 export const reviewsForRecipe = async (parent, { author }) => {
   const name = parent.name;

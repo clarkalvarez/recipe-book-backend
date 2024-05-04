@@ -1,4 +1,4 @@
-import { pool } from "../../../migration/db.js";
+import { pool } from "../../db.js";
 
 export const updateRecipe = async (
   _,
