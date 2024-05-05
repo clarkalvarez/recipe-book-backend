@@ -44,17 +44,12 @@ export const typeDefs = gql`
     deleteReview(id: ID!): String
   }
 
-  extend type Author @key(fields: "name") {
-    name: String @external
-  }
-
   type Review {
     id: ID
     dish: String
     review: String
     rate: Int
     author: String
-    authorDetails: Author
   }
 
   type Recipe {
@@ -63,6 +58,5 @@ export const typeDefs = gql`
     description: String
     image: String
     ingredients: [String]
-    reviewsForRecipe(author: String): [Review]
   }
 `;

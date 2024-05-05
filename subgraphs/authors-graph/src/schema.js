@@ -19,7 +19,7 @@ export const typeDefs = gql`
     deleteAuthor(id: ID!): String
   }
 
-  type Author @key(fields: "name") {
+  type Author {
     id: ID
     name: String
     biography: String

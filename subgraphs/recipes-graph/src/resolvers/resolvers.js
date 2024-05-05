@@ -8,8 +8,6 @@ import { recipe } from "./query/recipe.js";
 import { recipes } from "./query/recipes.js";
 import { review } from "./query/review.js";
 import { reviews } from "./query/reviews.js";
-import { reviewsForRecipe } from "./query/reviewsForRecipe.js";
-import { reviewToAuthorResolver } from "./query/reviewToAuthorResolver.js";
 
 export const resolvers = {
   Query: {
@@ -25,11 +23,5 @@ export const resolvers = {
     addReview,
     updateReview,
     deleteReview,
-  },
-  Recipe: {
-    reviewsForRecipe,
-  },
-  Review: {
-    authorDetails: reviewToAuthorResolver,
   },
 };
