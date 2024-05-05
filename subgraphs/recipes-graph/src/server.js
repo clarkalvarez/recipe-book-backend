@@ -1,9 +1,5 @@
 import { ApolloServer } from "apollo-server";
 import { buildSubgraphSchema } from "@apollo/federation";
-import {
-  ApolloServerPluginInlineTrace,
-  ApolloServerPluginLandingPageLocalDefault,
-} from "apollo-server-core";
 import { resolvers } from "./resolvers/resolvers.js";
 import { typeDefs } from "./schema.js";
 

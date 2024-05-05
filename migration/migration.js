@@ -10,20 +10,20 @@ db.schema
     table.string("name").notNullable();
     table.string("description").notNullable();
     table.string("image").notNullable();
-    table.specificType("ingredients", "TEXT[]").notNullable(); // Define the column as an array of TEXT (strings)
+    table.specificType("ingredients", "TEXT[]").notNullable();
   })
   .createTable("reviews", (table) => {
     table.increments("id").primary();
     table.string("dish").notNullable();
     table.string("review").notNullable();
-    table.string("rate").notNullable();
+    table.integer("rate").notNullable();
     table.string("author").notNullable();
   })
-  .createTable("author", (table) => {
+  .createTable("authors", (table) => {
     table.increments("id").primary();
     table.string("name").notNullable();
-    table.string("description").notNullable();
-    table.string("followers").notNullable();
+    table.string("biography").notNullable();
+    table.integer("followers").notNullable();
   })
   .then(() => console.log("Tables created successfully"))
   .catch((err) => console.error("Error creating tables:", err))

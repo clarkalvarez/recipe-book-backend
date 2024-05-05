@@ -1,9 +1,5 @@
 import { ApolloServer } from "apollo-server";
 import { buildSubgraphSchema } from "@apollo/federation";
-import {
-  ApolloServerPluginInlineTrace,
-  ApolloServerPluginLandingPageLocalDefault,
-} from "apollo-server-core";
 import { resolvers } from "./resolvers/resolvers.js";
 import { typeDefs } from "./schema.js";
 
@@ -20,7 +16,7 @@ const startServer = async () => {
   server
     .listen({ port: 4002 })
     .then(({ url }) => {
-      console.log(`Reviews Graph started at ${url} `);
+      console.log(`Authors Graph started at ${url} `);
     })
     .catch((e) => {
       console.log(e.message);
@@ -28,5 +24,5 @@ const startServer = async () => {
 };
 
 startServer()
-  .then(() => console.log("Reviews Graph is running"))
-  .catch((err) => console.log("Error starting Reviews Graph", err));
+  .then(() => console.log("Authors Graph is running"))
+  .catch((err) => console.log("Error starting Authors Graph", err));

@@ -4,7 +4,7 @@ import waitPort from "wait-port";
 
 const services = [
   { name: "Recipes Graph", url: "http://localhost:4001" },
-  { name: "Reviews Graph", url: "http://localhost:4002" },
+  { name: "Authors Graph", url: "http://localhost:4002" },
 ];
 
 const supergraphSdl = new IntrospectAndCompose({

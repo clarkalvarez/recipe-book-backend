@@ -1,8 +1,8 @@
 import { pool } from "../../db.js";
 
-export const deleteRecipe = async (_, { id }) => {
+export const deleteAuthor = async (_, { id }) => {
   const result = await pool.query(
-    "DELETE FROM recipes WHERE id = $1 RETURNING name",
+    "DELETE FROM authors WHERE id = $1 RETURNING name",
     [id]
   );
 

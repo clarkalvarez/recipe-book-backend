@@ -1,5 +1,5 @@
 {
-  "name": "recipes-backend",
+  "name": "gateway-backend",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,9 +7,9 @@
     "start": "concurrently npm:start:graphs npm:start:gateway",
     "start:gateway": "nodemon gateway.js",
     "start:graphs": "concurrently npm:start:graph:*",
-    "start:graph:recipe": "nodemon recipes-graph/src/server.js",
-    "start:graph:reviews": "nodemon reviews-graph/src/server.js",
-    "migrate": "node src/migration/migration.js",
+    "start:graph:recipe": "nodemon subgraphs/recipes-graph/src/server.js",
+    "start:graph:authors": "nodemon subgraphs/authors-graph/src/server.js",
+    "migrate": "node migration/migration.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
